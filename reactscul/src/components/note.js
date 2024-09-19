@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const Note = ({ title, description }) => {
   const [showDescription, setshowDescription] = useState(false);
+  console.log(title, description);
   return (
     <>
       <button
