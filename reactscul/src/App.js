@@ -1,10 +1,11 @@
 import "./App.css";
-import Note from "./components/note";
+import NoteList from "./components/NotesList/noteList";
 
 function App() {
   return (
     <>
-      <Note title="Title1" description="Desc1" />
+      <h1 className="block mx-auto px-4 py-2 bg-blue-500 text-white rounded">Notatki:</h1>
+      <NoteList/>
     </>
   );
 }
