@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Manual CLI Formatting: Run Prettier on specific files or folders:
+### npx prettier --write src/
+
 ## Available Scripts
 
 In the project directory, you can run:
