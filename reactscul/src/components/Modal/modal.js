@@ -1,4 +1,5 @@
 import { createPortal } from 'react-dom'
+
 const Modal = ({ active, setIsModal }) => {
   return (
     active &&
