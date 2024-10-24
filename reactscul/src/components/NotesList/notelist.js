@@ -35,12 +35,7 @@ const NotesList = () => {
       <hr />
       {/* Container for individual notes */}
       <div>
-<<<<<<< HEAD
         {currentNotes.map((currentNote) => (
-=======
-        {/* Map through NOTES array to render individual Note components */}
-        {NOTES.map((currentNote) => (
->>>>>>> origin/main
           <Note
             key={currentNote.id}
             title={currentNote.title}

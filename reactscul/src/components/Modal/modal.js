@@ -1,14 +1,6 @@
 import { createPortal } from 'react-dom'
 
-<<<<<<< HEAD
 const Modal = ({ active, children }) => {
-=======
-// Modal component for editing notes
-// Props:
-// - active: boolean to control modal visibility
-// - setIsModal: function to update modal visibility state
-const Modal = ({ active, setIsModal }) => {
->>>>>>> origin/main
   return (
     active &&
     createPortal(
