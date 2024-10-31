@@ -16,7 +16,7 @@ const Note = ({ title, description, deleteNote }) => {
     <div className="m-4 transform rounded-lg bg-white p-4 shadow-lg transition hover:scale-105 hover:shadow-xl">
       <div className="flex items-center justify-between">
         <button onClick={toggleContent} className="flex-grow text-left">
-          <h2 className="mb-2 text-2xl font-semibold text-gray-800">
+          <h2 className="mb-2 text-2xl font-semibold text-[#0A0A0A]">
             {currentTitle}
           </h2>
         </button>
@@ -39,7 +39,9 @@ const Note = ({ title, description, deleteNote }) => {
         </div>
       </div>
 
-      {isExpanded && <p className="mb-4 text-gray-600">{currentDescription}</p>}
+      {isExpanded && (
+        <p className="mb-4 text-[#0A0A0A]">{currentDescription}</p>
+      )}
       <Modal active={isModal} setIsModal={setIsModal}>
         <h2 className="ftex-2xl font-bold nb-8">Edite Noet</h2>
         <form className="flex flex-col gap-2">

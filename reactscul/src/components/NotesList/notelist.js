@@ -9,8 +9,6 @@ const NotesList = () => {
   const [isModal, setIsModal] = useState(false)
   const [newTitle, setNewTitle] = useState('')
   const [newDescription, setNewDescription] = useState('')
-  const [currentDescription, setCurrentDescription] = useState('')
-
   const deleteNote = (id) => {
     setCurentNotes(currentNotes.filter((note) => note.id !== id))
   }
@@ -47,7 +45,7 @@ const NotesList = () => {
       <hr />
       <button
         type="button"
-        className="rounded-full bg-white px-4 py-2 text-amber-500 transition duration-300 hover:bg-black hover:text-white"
+        className="hover:scale-105 hover:shadow-xl rounded-full bg-[#0A0A0A] px-4 py-2 text-amber-500 transition duration-300 hover:text-white"
         onClick={() => setIsModal(true)}
       >
         Add Note
