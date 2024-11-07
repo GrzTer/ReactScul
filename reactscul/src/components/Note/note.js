@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import IconPencilSquare from '../Svg/Pen'
 import IconDeleteCircleOutline from '../Svg/Bin'
 import Modal from '../Modal/modal'
+import './styles.css'
 
 const Note = ({ title, description, deleteNote }) => {
   const [isModal, setIsModal] = useState(false)
@@ -65,7 +66,7 @@ const Note = ({ title, description, deleteNote }) => {
           />
           <button
             type={'button'}
-            className="py-2 px-4 bg-white rounded hover:text-indigo-700 transition"
+            className="animate-bounce py-2 px-4 bg-white rounded hover:text-indigo-700 transition"
             onClick={() => setIsModal(false)}
           >
             Submit

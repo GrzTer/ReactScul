@@ -1,0 +1,18 @@
+.vertical-container.left {
+  left: 0;
+  writing-mode: vertical-lr;
+  text-emphasis-color: white;
+    transform: rotate(180deg);
+}
+
+.vertical-container.right {
+  right: 0;
+  writing-mode: vertical-rl;
+}
+
+.h1vertical {
+    text-emphasis-position: under right;
+  text-emphasis: triangle white;
+  margin: 0;
+  transition: transform 0.3s ease;
+}

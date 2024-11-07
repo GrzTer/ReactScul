@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import Note from '../Note/note'
 import { NOTES } from './data'
 import Modal from '../Modal/modal'
-
-// NotesList component for rendering a list of notes
 const NotesList = () => {
   const [currentNotes, setCurentNotes] = useState(NOTES)
   const [isModal, setIsModal] = useState(false)
@@ -26,8 +24,9 @@ const NotesList = () => {
   }
 
   return (
-    <div className="bg-amber-500 p-10 rounded-xl flex flex-col gap-4 scale-150 shadow-2xl shadow-[#0A0A0A]  border-2 border-[#0A0A0A] ">
-      <h1 className="mb-6 text-center text-5xl font-bold">Notatki</h1>
+    // <h1 className={`h1vertical text-white text-5xl font-bold`}>Notowanie</h1>
+    <div className="bg-amber-500 p-10 rounded-xl flex flex-col gap-4 shadow-xl shadow-white border-2 border-[#0A0A0A] w-4/12">
+      <h1 className="mb-6 text-center text-5xl font-bold">NOTATKI</h1>
       <hr />
       <div>
         {currentNotes.map((currentNote) => (
