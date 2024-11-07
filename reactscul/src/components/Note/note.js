@@ -24,14 +24,14 @@ const Note = ({ title, description, deleteNote }) => {
         <div className="flex gap-2">
           <button
             type="button"
-            className="rounded-full bg-amber-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-600"
+            className="hover:animate-pulse rounded-full bg-amber-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-600"
             onClick={() => setIsModal(true)}
           >
             <IconPencilSquare />
           </button>
           <button
             type="button"
-            className="rounded-full bg-amber-500 px-4 py-2 text-white transition duration-300 hover:bg-red-600"
+            className="hover:animate-spin rounded-full bg-amber-500 px-4 py-2 text-white transition duration-300 hover:bg-red-600"
             onClick={deleteNote}
           >
             <IconDeleteCircleOutline />
@@ -50,6 +50,7 @@ const Note = ({ title, description, deleteNote }) => {
             id="title"
             name="title"
             type={'text'}
+            className="p-2 rounded hover:animate-pulse"
             value={currentTitle}
             onChange={(event) => setCurrentTitle(event.target.value)}
           />
@@ -58,6 +59,7 @@ const Note = ({ title, description, deleteNote }) => {
             id="description"
             name="description"
             type={'text'}
+            className="p-2 rounded hover:animate-pulse"
             value={currentDescription}
             onChange={(event) => setCurrentDescription(event.target.value)}
           />

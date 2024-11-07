@@ -26,12 +26,9 @@ const NotesList = () => {
   }
 
   return (
-    // Container for the entire notes list
-    <div className="bg-amber-500 p-10 rounded-xl flex flex-col gap-4 scale-125">
-      {/* Title of the notes list */}
+    <div className="bg-amber-500 p-10 rounded-xl flex flex-col gap-4 scale-150 shadow-2xl shadow-[#0A0A0A]  border-2 border-[#0A0A0A] ">
       <h1 className="mb-6 text-center text-5xl font-bold">Notatki</h1>
       <hr />
-      {/* Container for individual notes */}
       <div>
         {currentNotes.map((currentNote) => (
           <Note
@@ -45,7 +42,7 @@ const NotesList = () => {
       <hr />
       <button
         type="button"
-        className="hover:scale-105 hover:shadow-xl rounded-full bg-[#0A0A0A] px-4 py-2 text-amber-500 transition duration-300 hover:text-white"
+        className="animate-bounce hover:scale-105 hover:shadow-xl rounded-full bg-[#0A0A0A] px-4 py-2 text-amber-500 transition duration-300 hover:text-white"
         onClick={() => setIsModal(true)}
       >
         Add Note
@@ -64,7 +61,7 @@ const NotesList = () => {
             value={newTitle} // Bind input to the state
             onChange={(event) => setNewTitle(event.target.value)} // Update state on change
             placeholder="Enter note title"
-            className="p-2 rounded"
+            className="p-2 rounded hover:animate-pulse"
           />
 
           <label htmlFor="description">Description:</label>
@@ -75,12 +72,12 @@ const NotesList = () => {
             value={newDescription}
             onChange={(event) => setNewDescription(event.target.value)} // Update state on change
             placeholder="Enter note description"
-            className="p-2 rounded"
+            className="p-2 rounded hover:animate-pulse"
           />
 
           <button
             type="button"
-            className="py-2 px-4 bg-white rounded hover:text-indigo-700 transition mt-4"
+            className="animate-bounce py-2 px-4 bg-white rounded hover:text-indigo-700 transition mt-4"
             onClick={addNote}
           >
             Submit
