@@ -3,3 +3,6 @@
     font-size: 50px;
     font-weight: 700;
 }
+h1 {
+    text-shadow: white 0px 0px 10px;
+}
