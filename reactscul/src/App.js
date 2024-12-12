@@ -1,13 +1,29 @@
 import './App.css'
-import NoteList from './components/NotesList/notelist'
-import H1Vertical from './components/h1vertical'
+import './components/background.css'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import NotePage from './components/NotePage'
+import About from './components/Pages/about'
+import Contact from './components/Pages/contact'
+import Layout from './components/Layout'
+import Profile from './components/Pages/profile'
 function App() {
   return (
-    <div className="flex justify-center items-center h-screen w-screen bg-dotted-spacing-10 bg-dotted-amber-500 bg-dotted-radius-0.5 bg-[#0A0A0A] ">
-      <H1Vertical side="left" text="Note Taker" />
-      <NoteList />
-      <H1Vertical side="right" text="Note Taker" />
-    </div>
+    <BrowserRouter>
+      <div className="flex-col flex justify-center items-center h-screen w-screen ">
+        <div className="stars-1" />
+        <div className="stars-2" />
+        <div className="stars-3" />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<NotePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/profile/:id" element={<Profile />} />
+            <Route path="*" element={<h1>404</h1>} />
+          </Route>
+        </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 

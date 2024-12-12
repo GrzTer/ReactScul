@@ -1,0 +1,227 @@
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.15;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+:root {
+    --bg-color: #0A0A0A;
+    --surface-color: #242628;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.App {
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.App::before,
+.App::after,
+.stars-1,
+.stars-2,
+.stars-3 {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.stars-1,
+.stars-2,
+.stars-3 {
+    position: fixed;
+    background-image: radial-gradient(
+            circle at 20% 30%,
+            rgba(255, 255, 255, 0.8) 1px,
+            transparent 1px,
+            transparent 5px,
+            rgba(255, 255, 255, 0.3) 1.5px,
+            transparent 6px,
+            transparent 10px
+    ), radial-gradient(
+            circle at 75% 60%,
+            rgba(255, 255, 255, 0.7) 1px,
+            transparent 1px,
+            transparent 4px,
+            rgba(255, 255, 255, 0.4) 1px,
+            transparent 5px,
+            transparent 8px
+    ), radial-gradient(
+            circle at 45% 80%,
+            rgba(255, 255, 255, 0.6) 1.5px,
+            transparent 1.5px,
+            transparent 6px,
+            rgba(255, 255, 255, 0.2) 2px,
+            transparent 7px
+    );
+    background-size: 160px 160px, 140px 140px, 120px 120px;
+    background-position: 0 0, 40px 60px, -20px -30px;
+}
+
+.stars-1 {
+    animation: spin 240s linear infinite;
+    opacity: 0.2;
+}
+
+.stars-2 {
+    animation: spin 180s linear infinite reverse;
+    opacity: 0.15;
+    background-size: 140px 140px, 120px 120px, 100px 100px;
+    background-position: 20px 30px, -30px -50px, 10px 20px;
+}
+
+.stars-3 {
+    animation: spin 300s linear infinite;
+    opacity: 0.1;
+    background-size: 180px 180px, 160px 160px, 140px 140px;
+    background-position: -40px -60px, 50px 70px, -15px 25px;
+}
+
+
+
+
+
+/*@keyframes spin {*/
+/*    from {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    to {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+/*@keyframes twinkle {*/
+/*    0%, 100% {*/
+/*        opacity: 0.4;*/
+/*    }*/
+/*    50% {*/
+/*        opacity: 0.7;*/
+/*    }*/
+/*}*/
+
+/*:root {*/
+/*    --bg-color: #0A0A0A;*/
+/*    --surface-color: #242628;*/
+/*    --text-primary: #ffffff;*/
+/*    --text-secondary: #a0a0a0;*/
+/*}*/
+
+/*body {*/
+/*    background-color: var(--bg-color);*/
+/*    color: var(--text-primary);*/
+/*    margin: 0;*/
+/*}*/
+
+/*.App {*/
+/*    text-align: center;*/
+/*    min-height: 100vh;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*.App::before,*/
+/*.App::after,*/
+/*.stars-1,*/
+/*.stars-2,*/
+/*.stars-3 {*/
+/*    content: '';*/
+/*    position: fixed;*/
+/*    top: -50%;*/
+/*    left: -50%;*/
+/*    right: -50%;*/
+/*    bottom: -50%;*/
+/*    width: 200%;*/
+/*    height: 200%;*/
+/*    background: transparent;*/
+/*    z-index: -1;*/
+/*    pointer-events: none;*/
+/*}*/
+
+/*.stars-1,*/
+/*.stars-2,*/
+/*.stars-3 {*/
+/*    position: fixed;*/
+/*    background-image: radial-gradient(*/
+/*            circle at 20% 30%,*/
+/*            rgba(255, 255, 255, 1) 1px,*/
+/*            rgba(255, 255, 255, 0.3) 1.2px,*/
+/*            transparent 1.5px,*/
+/*            transparent 5px,*/
+/*            rgba(255, 255, 255, 0.6) 1.5px,*/
+/*            transparent 6px,*/
+/*            transparent 10px*/
+/*    ), radial-gradient(*/
+/*            circle at 75% 60%,*/
+/*            rgba(255, 255, 255, 1) 1px,*/
+/*            rgba(255, 255, 255, 0.3) 1.2px,*/
+/*            transparent 1.5px,*/
+/*            transparent 4px,*/
+/*            rgba(255, 255, 255, 0.7) 1px,*/
+/*            transparent 5px,*/
+/*            transparent 8px*/
+/*    ), radial-gradient(*/
+/*            circle at 45% 80%,*/
+/*            rgba(255, 255, 255, 1) 1.5px,*/
+/*            rgba(255, 255, 255, 0.3) 1.7px,*/
+/*            transparent 2px,*/
+/*            transparent 6px,*/
+/*            rgba(255, 255, 255, 0.5) 2px,*/
+/*            transparent 7px*/
+/*    );*/
+/*    background-size: 160px 160px, 140px 140px, 120px 120px;*/
+/*    background-position: 0 0, 40px 60px, -20px -30px;*/
+/*    filter: blur(0.1px);*/
+/*}*/
+
+/*.stars-1 {*/
+/*    animation:*/
+/*            spin 240s linear infinite,*/
+/*            twinkle 4s ease-in-out infinite;*/
+/*    opacity: 0.45;*/
+/*}*/
+
+/*.stars-2 {*/
+/*    animation:*/
+/*            spin 180s linear infinite reverse,*/
+/*            twinkle 5s ease-in-out infinite;*/
+/*    opacity: 0.4;*/
+/*    background-size: 140px 140px, 120px 120px, 100px 100px;*/
+/*    background-position: 20px 30px, -30px -50px, 10px 20px;*/
+/*}*/
+
+/*.stars-3 {*/
+/*    animation:*/
+/*            spin 300s linear infinite,*/
+/*            twinkle 6s ease-in-out infinite;*/
+/*    opacity: 0.35;*/
+/*    background-size: 180px 180px, 160px 160px, 140px 140px;*/
+/*    background-position: -40px -60px, 50px 70px, -15px 25px;*/
+/*}*/
