@@ -7,7 +7,7 @@ export default function Sidebar() {
                 <ul className="flex space-x-4">
                     <li><Link href="/account">Konto</Link></li>
                     <li><Link href="/account/account_settings">Ustawienia konta</Link></li>
-                    <li><Link href="/account/account_notes" on>Notatki</Link></li>
+                    <li><Link href="/account/account_notes">Notatki</Link></li>
                 </ul>
             </nav>
         </header>
