@@ -10,6 +10,7 @@ export default function Header() {
                     <li><Link href="/">Strona główna</Link></li>
                     <li><Link href="/about">O nas</Link></li>
                     <li><Link href="/contact">Kontakt</Link></li>
+                    <li><Link href="/account">Konto</Link></li>
                 </ul>
             </nav>
         </header>
