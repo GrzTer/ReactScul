@@ -1,3 +1,8 @@
 export default function Account() {
-    return <h1>Konto</h1>;
+    return (
+        <div className="p-4">
+            <h1 className="text-2xl font-bold">Konto</h1>
+            <p>Witamy w panelu konta użytkownika.</p>
+        </div>
+    );
 }
