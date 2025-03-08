@@ -12,7 +12,7 @@ export default function Kontakt() {
     };
 
     return (
-        <div className="max-w-lg mx-auto mt-10">
+        <div className="max-w-lg mx-auto mt-10 bg-black text-white p-4">
             <h1 className="text-2xl font-bold mb-4">Formularz kontaktowy</h1>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
@@ -21,7 +21,7 @@ export default function Kontakt() {
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full p-2 border rounded"
+                        className="w-full p-2 border border-white rounded bg-black text-white"
                         required
                     />
                 </div>
@@ -30,11 +30,14 @@ export default function Kontakt() {
                     <textarea
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="w-full p-2 border rounded h-32"
+                        className="w-full p-2 border border-white rounded bg-black text-white h-32"
                         required
                     />
                 </div>
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+                <button
+                    type="submit"
+                    className="px-4 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition"
+                >
                     Wyślij
                 </button>
             </form>
