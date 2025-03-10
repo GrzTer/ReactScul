@@ -1,5 +1,6 @@
 "use client";
 
+import { link } from 'fs';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,8 +16,8 @@ export default function Header() {
     ];
 
     return (
-        <header className="border-b flex items-center justify-between p-4 bg-black text-white">
-            <Image src="/logo.jpg" alt="Logo" width={50} height={50} />
+        <header className="border-b flex justify-between items-center p-4 bg-black text-white">
+            <Image src={"/logo.jpg"} alt="Logo" width={50} height={50}/>
             <nav>
                 <ul className="flex space-x-4">
                     {links.map(({ href, label, exact }) => {

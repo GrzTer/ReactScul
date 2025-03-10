@@ -1,4 +1,3 @@
-// app/layout.tsx
 import { Inter } from 'next/font/google';
 import Header from "@/app/header";
 import './globals.css';
