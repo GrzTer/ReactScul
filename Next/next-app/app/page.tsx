@@ -5,3 +5,14 @@ export default function Home() {
     </div>
   );
 }
+
+// Zakres React:
+// - Tworzenie komponentów
+// - Obsługa hooka usestate
+// - Praca na strukturach danych, takich jak tablica obiektów
+// - Metody Tablicy: map, filter, find, some
+// - Zmiana stanu komponentu, będądzego obiektem
+// - Stylowanie komponentów, po przez css lub bootstrap
+// - Dodawanie obrazu
+// - Obsługa formularzy
+// - Renderowanie warunkowe - ternary operator / &&
