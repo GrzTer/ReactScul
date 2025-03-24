@@ -5,9 +5,11 @@
 //         </div>
 //     );
 // }
- function Profile = async ({ params, searchParams }) => {
-    const { id } = await params
-    const { searchId } = await searchParams
+function Profile
+
+= async ({params, searchParams}) => {
+    const {id} = await params
+    const {searchId} = await searchParams
 
     return (
         <p>{`${id} ${searchId}`}</p>

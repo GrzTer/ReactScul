@@ -2,16 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import {usePathname} from 'next/navigation';
 
 export default function Header() {
     const pathname = usePathname();
 
     const links = [
-        { href: '/', label: 'Strona główna', exact: true },
-        { href: '/about', label: 'O nas', exact: true },
-        { href: '/contact', label: 'Kontakt', exact: true },
-        { href: '/account', label: 'Konto', exact: false },
+        {href: '/', label: 'Strona główna', exact: true},
+        {href: '/about', label: 'O nas', exact: true},
+        {href: '/contact', label: 'Kontakt', exact: true},
+        {href: '/account', label: 'Konto', exact: false},
     ];
 
     return (
@@ -19,7 +19,7 @@ export default function Header() {
             <Image src={"/logo.jpg"} alt="Logo" width={50} height={50}/>
             <nav>
                 <ul className="flex space-x-4">
-                    {links.map(({ href, label, exact }) => {
+                    {links.map(({href, label, exact}) => {
                         const isActive = exact ? pathname === href : pathname.startsWith(href);
                         return (
                             <li key={href}>
