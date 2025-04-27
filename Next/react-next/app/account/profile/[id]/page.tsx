@@ -3,7 +3,8 @@ import {users} from '@/app/utils/data'
 export default function Profile({params, searchParams}: { params: { id: string }; searchParams: { id?: string } }) {
     const id = Number(params.id)
     const user = users.find(u => u.id === id)
-    if (!user) return <div className="flex justify-center items-center min-h-screen bg-black text-white">
+    if (!user) return <div
+        className="outline-dotted justify-center text-center p-4 bg-black text-white min-h-screen content-center">
         <h1>Użytkownik nie istnieje</h1>
     </div>
     const dId = searchParams.id ? Number(searchParams.id) : null

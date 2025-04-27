@@ -11,7 +11,7 @@
 
 export default function Settings() {
     return (
-        <div className="p-4 bg-black text-white">
+        <div className="outline-dotted justify-center text-center p-4 bg-black text-white min-h-screen content-center">
             <h1 className="text-2xl font-bold">Ustawienia konta</h1>
             <p>Tu możesz zmienić ustawienia konta.</p>
         </div>

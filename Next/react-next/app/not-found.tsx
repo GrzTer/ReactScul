@@ -1,6 +1,6 @@
 export default function NotFound() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-black text-white">
+        <div className="outline-dotted justify-center text-center p-4 bg-black text-white min-h-screen content-center">
             <h1>Strona nie znaleziona</h1>
         </div>
     );
