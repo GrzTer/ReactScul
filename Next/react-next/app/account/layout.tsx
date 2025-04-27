@@ -5,7 +5,7 @@ import {usePathname} from 'next/navigation'
 export default function AccountLayout({children}: { children: React.ReactNode }) {
     const pathname = usePathname()
     const links = [
-        {href: '/account/profile', label: 'Profil użytkownika', exact: true},
+        {href: '/account/profile/1', label: 'Profil użytkownika', exact: true},
         {href: '/account/notes', label: 'Notatki', exact: true},
         {href: '/account/settings', label: 'Ustawienia konta', exact: true},
     ]

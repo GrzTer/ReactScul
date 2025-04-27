@@ -1,39 +1,30 @@
-"use client";
-import Link from 'next/link';
-import {usePathname} from 'next/navigation';
+'use client'
+import Link from 'next/link'
+import {FaDiscord, FaGithub, FaInbox} from 'react-icons/fa'
 
 export default function Footer() {
-    const pathname = usePathname();
-
-    const links = [
-        {href: '/', label: 'Strona główna', exact: true},
-        {href: '/about', label: 'O nas', exact: true},
-        {href: '/contact', label: 'Kontakt', exact: true},
-        {href: '/account', label: 'Konto', exact: false},
-    ];
-
     return (
-        <header className="border-t flex items-center p-4 bg-black text-white justify-center  border-1">
-            <nav>
-                <ul className="flex space-x-4">
-                    {links.map(({href, label, exact}) => {
-                        const isActive = exact ? pathname === href : pathname.startsWith(href);
-                        return (
-                            <li key={href}>
-                                {isActive ? (
-                                    <span className="font-bold text-blue-500" aria-current="page">
-                                        {label}
-                                    </span>
-                                ) : (
-                                    <Link href={href} className="text-white hover:underline">
-                                        {label}
-                                    </Link>
-                                )}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </nav>
-        </header>
-    );
+        <footer className="bg-black text-white border-t border-white border-r border-l">
+            <div className="container mx-auto px-4 py-4 grid grid-cols-2 md:grid-cols-2 gap-1 w-full">
+                <div className="space-y-2">
+                    <h3 className="font-semibold text-lg">Kontakt</h3>
+                    <p>JAjaJAja@gmail.com</p>
+                    <p>+48 123 456 789</p>
+                </div>
+
+                <div className="space-y-2 text-center">
+                    <h3 className="font-semibold text-lg">Znajdź nas</h3>
+                    <div className="flex justify-center space-x-4 text-2xl">
+                        <Link href="#"><FaGithub/></Link>
+                        <Link href="#"><FaDiscord/></Link>
+                        <Link href="#"><FaInbox/></Link>
+                    </div>
+                </div>
+            </div>
+
+            <div className="border-t border-white mt-4 pt-4 text-sm border-b text-center">
+                © 2025 Moja Apka. Wszelkie prawa zastrzeżone.
+            </div>
+        </footer>
+    )
 }

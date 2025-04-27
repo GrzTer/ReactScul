@@ -1,4 +1,3 @@
-// app/account/profile/[id]/page.tsx
 import { users } from '@/app/utils/data'
 import React from 'react'
 
@@ -11,7 +10,6 @@ export default function Profile({ params, searchParams }: Props) {
     const userId = Number(params.id)
     const user = users.find(u => u.id === userId)
 
-    // 1) Brak użytkownika
     if (!user) {
         return (
             <div className=" outline-dashedflex items-center justify-center min-h-screen bg-black text-white p-4">
@@ -22,7 +20,6 @@ export default function Profile({ params, searchParams }: Props) {
         )
     }
 
-    // 2) Opcjonalny szczegół
     const detailId = searchParams.id ? Number(searchParams.id) : null
     const detail = detailId !== null
         ? user.details.find(d => d.id === detailId) || null
@@ -31,7 +28,6 @@ export default function Profile({ params, searchParams }: Props) {
     return (
         <div className=" outline-dashed flex items-center justify-center min-h-screen bg-black text-white p-4">
             <div className="w-full max-w-3xl space-y-6">
-                {/* Sekcja: Info o użytkowniku */}
                 <section className="border border-white p-6 rounded-lg">
                     <h1 className="text-3xl font-bold mb-2">{user.name}</h1>
                     <p>
@@ -39,7 +35,6 @@ export default function Profile({ params, searchParams }: Props) {
                     </p>
                 </section>
 
-                {/* Sekcja: Szczegóły lub lista elementów */}
                 <section className="border border-white p-6 rounded-lg">
                     {detailId !== null ? (
                         detail ? (
@@ -52,7 +47,7 @@ export default function Profile({ params, searchParams }: Props) {
                         )
                     ) : (
                         <>
-                            <h2 className="text-2xl font-semibold mb-4">Lista elementów</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Detale</h2>
                             <ul className="space-y-3">
                                 {user.details.map(d => (
                                     <li
