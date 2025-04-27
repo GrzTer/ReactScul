@@ -1,38 +1,72 @@
-import {users} from '@/app/utils/data'
+// app/account/profile/[id]/page.tsx
+import { users } from '@/app/utils/data'
+import React from 'react'
 
-export default function Profile({params, searchParams}: { params: { id: string }; searchParams: { id?: string } }) {
-    const id = Number(params.id)
-    const user = users.find(u => u.id === id)
-    if (!user) return <div
-        className="outline-dotted justify-center text-center p-4 bg-black text-white min-h-screen content-center">
-        <h1>Użytkownik nie istnieje</h1>
-    </div>
-    const dId = searchParams.id ? Number(searchParams.id) : null
-    return (
-        <div className="flex justify-center items-center min-h-screen bg-black text-white border-2 border-dashed">
-            <div className="text-center">
-                <h1 className="text-2xl font-bold mb-4">{user.name} – Profil</h1>
-                <p className="mb-4">Email: {user.email}</p>
-                {dId !== null ? (() => {
-                    const d = user.details.find(x => x.id === dId)
-                    return d ? <div>
-                            <h2 className="text-xl font-semibold">{d.title}</h2>
-                            <p>{d.description}</p>
-                        </div> :
-                        <p className="text-red-400">Nie znaleziono elementu o podanym id</p>
-                })() : <div>
-                    <h2 className="text-xl font-semibold mb-2">Lista elementów:</h2>
-                    <ul className="list-disc list-inside">{user.details.map(x =>
-                        <li key={x.id}>
-                        <span className="font-medium">
-                            {x.title}
-                        </span>:
-                            {x.description}
-                        </li>
-                    )}
-                    </ul>
+interface Props {
+    params: { id: string }
+    searchParams: { id?: string }
+}
+
+export default function Profile({ params, searchParams }: Props) {
+    const userId = Number(params.id)
+    const user = users.find(u => u.id === userId)
+
+    // 1) Brak użytkownika
+    if (!user) {
+        return (
+            <div className=" outline-dashedflex items-center justify-center min-h-screen bg-black text-white p-4">
+                <div className="border border-white p-8 rounded-lg text-center">
+                    <h1 className="text-2xl font-semibold">Użytkownik nie istnieje</h1>
                 </div>
-                }
+            </div>
+        )
+    }
+
+    // 2) Opcjonalny szczegół
+    const detailId = searchParams.id ? Number(searchParams.id) : null
+    const detail = detailId !== null
+        ? user.details.find(d => d.id === detailId) || null
+        : null
+
+    return (
+        <div className=" outline-dashed flex items-center justify-center min-h-screen bg-black text-white p-4">
+            <div className="w-full max-w-3xl space-y-6">
+                {/* Sekcja: Info o użytkowniku */}
+                <section className="border border-white p-6 rounded-lg">
+                    <h1 className="text-3xl font-bold mb-2">{user.name}</h1>
+                    <p>
+                        <span className="font-medium">Email:</span> {user.email}
+                    </p>
+                </section>
+
+                {/* Sekcja: Szczegóły lub lista elementów */}
+                <section className="border border-white p-6 rounded-lg">
+                    {detailId !== null ? (
+                        detail ? (
+                            <>
+                                <h2 className="text-2xl font-semibold mb-2">{detail.title}</h2>
+                                <p>{detail.description}</p>
+                            </>
+                        ) : (
+                            <p className="text-red-500">Nie znaleziono elementu o podanym id</p>
+                        )
+                    ) : (
+                        <>
+                            <h2 className="text-2xl font-semibold mb-4">Lista elementów</h2>
+                            <ul className="space-y-3">
+                                {user.details.map(d => (
+                                    <li
+                                        key={d.id}
+                                        className="border border-white p-4 rounded transition"
+                                    >
+                                        <h3 className="font-medium">{d.title}</h3>
+                                        <p>{d.description}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    )}
+                </section>
             </div>
         </div>
     )
