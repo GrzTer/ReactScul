@@ -1,25 +1,106 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className='header'>
+        <div className='container'>
+          HEADDDDEEEERRR
+        </div>
       </header>
-    </div>
-  );
+      <main className='main'>
+        <div className='container main-content'>
+
+          <aside className='filter-aside'>
+            <h2 className='conteiner-title'>PANEELL BOCZNYY</h2>
+            <ol>
+              <li>Filtr 1</li>
+              <ul>
+                <li>Filtr 1.1</li>
+                <li>Filtr 1.2</li>
+                <ul>
+                  <li>Filtr 1.2.1</li>
+                  <li>Filtr 1.2.2</li>
+                  <li>Filtr 1.2.3</li>
+                  <li>Filtr 1.2.4</li>
+                </ul>
+                <li>Filtr 1.3</li>
+                <li>Filtr 1.4</li>
+              </ul>
+              <li>Filtr 2</li>
+              <li>Filtr 3</li>
+              <li>Filtr 4</li>
+            </ol>
+          </aside>
+          <section className='products-list'>
+            <h2 className='conteiner-title'>ZAWAARRTTTOOŚĆ</h2>
+            <ul className='list-container'>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+              <li className='product-tile'>
+                <h3>Nazwa Produktu</h3>
+                <div className='tile-line'/>
+                <span>99zł</span>
+                <button type='button' className='tile-button'>Dodaj Do Koszyka</button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <footer className='footer'>
+        <div className='container'>
+          FOOOTTTEEEERRR
+        </div>
+      </footer>
+    </>
+
+  )
 }
 
 export default App;
