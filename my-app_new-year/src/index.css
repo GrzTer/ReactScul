@@ -22,17 +22,19 @@ code {
   background-color: black;
   text-align: center;
   color: yellow;
+  border: 1px solid yellow;
 }
 
 .footer{
   background-color: black;
   text-align: center;
   color: yellow;
+  border: 1px solid yellow;
 }
 
 .main {
   background-color: yellow;
-  min-height: calc(100vh - 85px - 85px);
+  min-height: calc(100vh - 87px - 87px);
   /* height: 81.5vh; */
 }
 
