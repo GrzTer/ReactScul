@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+hr {
+  border-color: yellow;
+}
+
 .container {
   max-width: 1440px;
   padding: 32px 0;
@@ -36,6 +40,7 @@ code {
   background-color: yellow;
   min-height: calc(100vh - 87px - 87px);
   /* height: 81.5vh; */
+  display: flex;
 }
 
 .main-content {
@@ -45,6 +50,7 @@ code {
 
 .conteiner-title {
   text-align: center;
+  /* border: 1px solid yellow; */
 }
 .filter-aside {
   background-color: black;
@@ -82,4 +88,10 @@ code {
     background-color: yellow;
     border: 1px solid yellow;
   }
+}
+
+.img-ads
+{
+  min-width: 15vw;
+  /* object-fit: contain; */
 }
