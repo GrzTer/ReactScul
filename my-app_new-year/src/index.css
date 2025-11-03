@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+hr {
+  border-color: yellow;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 32px 0;
+  margin: auto;
+}
+
+.header{
+  background-color: black;
+  text-align: center;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.footer{
+  background-color: black;
+  text-align: center;
+  color: yellow;
+  border: 1px solid yellow;
+}
+
+.main {
+  background-color: yellow;
+  min-height: calc(100vh - 87px - 87px);
+  /* height: 81.5vh; */
+  display: flex;
+}
+
+.main-content {
+  display: flex;
+  gap: 24px;
+}
+
+.conteiner-title {
+  text-align: center;
+  /* border: 1px solid yellow; */
+}
+.filter-aside {
+  background-color: black;
+  color: yellow;
+  min-width: 300px;
+  max-width: 25%;
+  width: 100%;
+  padding: 16px;
+ }
+
+.products-list {
+  background-color: black;
+  color: yellow;
+  width: 100%;
+  padding: 16px;
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .product-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid yellow;
+    border-radius: 10%;
+  }
+  .tile-button {
+    background-color: yellow;
+    color: black;
+  }
+  .tile-line{
+    margin-top: -3vh;
+    background-color: yellow;
+    border: 1px solid yellow;
+  }
+}
+
+.img-ads
+{
+  min-width: 15vw;
+  /* object-fit: contain; */
+}
