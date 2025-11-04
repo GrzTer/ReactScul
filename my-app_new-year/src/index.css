@@ -41,6 +41,7 @@ hr {
   min-height: calc(100vh - 87px - 87px);
   /* height: 81.5vh; */
   display: flex;
+  
 }
 
 .main-content {
@@ -93,5 +94,6 @@ hr {
 .img-ads
 {
   min-width: 15vw;
+  border: 1px solid yellow;
   /* object-fit: contain; */
 }
